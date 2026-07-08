@@ -1,9 +1,8 @@
 // List of background images
 const images = [
   "images/pool6.jpg",
-  "images/pool1.jpg",
-  "images/pool2.jpg",
-  "images/pool3.jpg"
+  "images/poolOne.jpg",
+  "images/poolTwo.jpg"
 ];
 
 let currentIndex = 0;
