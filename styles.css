@@ -180,3 +180,8 @@ footer {
   background-position: center 70%;   /* show the bottom half */
   background-size: cover;               /* still fill the slider */
 }
+
+.lessons-slider {
+  margin-left: -20px;   /* move left */
+}
+
