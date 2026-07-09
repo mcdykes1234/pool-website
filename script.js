@@ -51,7 +51,9 @@ function updateLessonImage() {
     `url(${lessonImages[lessonIndex]})`;
 }
 
+if (document.querySelector(".lessons-slider")) {
 updateLessonImage();
+}
 
 function nextLessonImage() {
   lessonIndex = (lessonIndex + 1) % lessonImages.length;
@@ -61,4 +63,41 @@ function nextLessonImage() {
 function prevLessonImage() {
   lessonIndex = (lessonIndex - 1 + lessonImages.length) % lessonImages.length;
   updateLessonImage();
+}
+
+const eventImages = [
+  "images/poolEvents1.jpg",
+  "images/poolEvents2.jpg",
+  "images/poolEvents3.jpg"
+];
+
+let eventIndex = 0;
+
+function updateEventImage() {
+  const slider = document.querySelector(".events-slider");
+
+  // Set the background image
+  slider.style.backgroundImage = `url(${eventImages[eventIndex]})`;
+
+  // Remove zoom class every time
+  slider.classList.remove("event-zoom");
+
+  // Apply zoom only to poolEvents3.jpg
+  if (eventImages[eventIndex].includes("poolEvents3.jpg")) {
+    slider.classList.add("event-zoom");
+  }
+}
+
+if (document.querySelector(".events-slider")) {
+  updateEventImage();
+}
+
+function nextEventImage() {
+  eventIndex = (eventIndex + 1) % eventImages.length;
+  updateEventImage();
+}
+
+function prevEventImage() {
+  eventIndex = (eventIndex - 1 + eventImages.length) % eventImages.length;
+  updateEventImage();
 }
