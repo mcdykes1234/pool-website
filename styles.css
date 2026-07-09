@@ -140,11 +140,8 @@ footer {
   transition: background-image 0.5s ease-in-out;
 }
 
-.WYLI {
- text-align: center;
-}
-
 .WYLI h1 {
+  text-align: center;
   font-size: 50px;
   color: red;
   font-weight: bold;
@@ -200,3 +197,21 @@ footer {
   background-size: 50%;        /* zoom OUT heavily */
   background-position: center 20%; /* center at 20% */
 }
+
+.WYLI ul {
+  list-style-type: disc;
+  list-style-position: outside;   /* bullet stays OUTSIDE the text block */
+  padding-left: 40px;             /* creates space for bullet */
+  margin: 0 auto;
+  text-align: left;               /* bullet + text align properly */
+  width: 60%;                     /* centers the whole list */
+}
+
+.WYLI li h2 {
+  display: inline;                /* keeps text on same line as bullet */
+  margin: 0;
+}
+
+
+
+
